@@ -39,7 +39,7 @@ def api_root(request, format=None):
     })
 
 class SnippetHighlight(generics.GenericAPIView):
-    queryset = self.objects.all()
+    queryset = Snippet.objects.all()
     renderer_classes = (renderers.StaticHTMLRenderer,)
   
     def get(self, request, *args, **kwargs):
